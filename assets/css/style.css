@@ -20,7 +20,7 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
@@ -52,22 +52,22 @@ h1 {
 }
 
 nav {
-    position:absolute;
+    position: absolute;
     background-color: #ffffff;
-    width:100%;
-    left:0;
+    width: 100%;
+    left: 0;
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
-    display:none;
-    top:100%;
+    display: none;
+    top: 100%;
 }
 
 #nav-toggle:checked ~ nav {
-    display:block;
+    display: block;
 }
 
 #nav-toggle {
-    display:none
+    display: none;
 }
 
 .nav-toggle-label {
@@ -77,8 +77,31 @@ nav {
 main {
     background-color: lightblue;
     flex: 1 0 auto;
+    margin-top: 47px;
 }
 
 footer {
     background-color: orange;
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        display:block;
+        position:relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
 }
